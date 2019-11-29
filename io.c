@@ -326,7 +326,7 @@ rb_cloexec_open(const char *pathname, int flags, mode_t mode)
 
         if (ret != -1 || e != EAGAIN || retry_count >= retry_max_count) {
             if (retry_count > 0) {
-                // fprintf(stderr, "%s:%d %s - pathname = %s, ret = %d, errno = %d, retry_count = %d\n", __FILE__, __LINE__, __func__, pathname, ret, errno, retry_count);
+                fprintf(stderr, "%s:%d %s - pathname = %s, ret = %d, errno = %d, retry_count = %d\n", __FILE__, __LINE__, __func__, pathname, ret, errno, retry_count);
             }
 
             break;
